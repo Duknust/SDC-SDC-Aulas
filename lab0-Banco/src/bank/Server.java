@@ -48,7 +48,7 @@ public class Server implements MessageListener {
         p.openControlSession(gc).join();
 
         ds = p.openDataSession(gc);
-        ds.setMessageListener(this);
+        ds.getMessageListener(this);
 
         System.out.println("Server started: ");
 
